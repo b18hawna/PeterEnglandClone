@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Section</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .background-image {
+            background-image:
+                url('https://s7ap1.scene7.com/is/image/adityabirlafashion/1600-x-900?resMode=sharp2&wid=1600&hei=900');
+            background-size:
+                cover;
+            background-position:
+                center;
+            height:
+                93vh;
+            position:
+                relative;
+        }
+
+        .overlay-content {
+            position:
+                absolute;
+            margin-top:
+                80vh;
+            margin-left:
+                628px;
+            margin-bottom:
+                0;
+            padding:
+                20px;
+            width:
+                100%;
+            transform:
+                translate(-50%,
+                    -50%);
+            text-align:
+                center;
+            color:
+                black;
+            background-color:
+                rgba(116,
+                    111,
+                    111,
+                    0.354);
+        }
+
+        .overlay-content p {
+            font-size:
+                1rem;
+        }
+
+        .shop-by-category {
+            margin-top:
+                50px;
+            margin-bottom:
+                50px;
+            text-align:
+                center;
+        }
+
+        .category-card {
+            height:
+                95%;
+            width:
+                25%;
+            margin:
+                2px;
+        }
+
+        .category-card img {
+            width:
+                100%;
+            height:
+                55%;
+        }
+
+        .category-card h5 {
+
+            text-align:
+                center;
+        }
+
+        .categories-row {
+            display:
+                flex;
+            justify-content:
+                center;
+        }
+
+        .shop-by-brand {
+            margin-top:
+                80px;
+            text-align:
+                center;
+        }
+
+        .brand-card {
+            height:
+                60%;
+            width:
+                100%;
+        }
+
+        .brand-card img {
+            height:
+                400px;
+            width:
+                300px;
+            margin:
+                2px;
+        }
+
+        .brand-row {
+            display:
+                flex;
+            justify-content:
+                center;
+        }
+
+
+
+        footer {
+            padding:
+                20px;
+            margin:
+                5px 0px 0px 0px;
+            background-color:
+                rgba(0,
+                    0,
+                    0,
+                    0.87);
+        }
+
+        .page-end {
+            margin:
+                25px 0px 0px 0px;
+            padding:
+                0;
+        }
+
+        .brand-card h2 {
+            /*
+        margin-top:
+        7px;
+        */
+            text-align:
+                center;
+        }
+
+        .green-banner {
+            background-color:
+                rgb(0,
+                    115,
+                    74);
+            color:
+                white;
+            padding:
+                2.5px 0;
+            text-align:
+                center;
+        }
+
+        .green-banner marquee {
+            font-size:
+                small;
+        }
+
+        .bllack {
+            background-color:
+                rgba(0,
+                    0,
+                    0,
+                    0.87);
+            padding:
+                0 rem;
+        }
+
+        .bllack a {
+            color:
+                white;
+            font-size:
+                medium;
+        }
+
+        .bllack img {
+            background-color:
+                white;
+            margin:
+                10px;
+            padding:
+                2px;
+        }
+
+        .main-menu div a {
+            color:
+                black;
+            font-size:
+                small;
+        }
+
+        .main-menu div a:hover {
+            font-size:
+                medium;
+        }
+
+        .main-menu {
+            padding-top:
+                0;
+            margin-top:
+                0;
+            margin-left:
+                35px;
+        }
+
+        .navbar {
+            padding:
+                0;
+            font-size:
+                small;
+        }
+
+        .headImg {
+            color:
+                white;
+        }
+
+        .cart-icon {
+            cursor:
+                pointer;
+        }
+
+        .badge {
+            font-size:
+                1rem;
+        }
+
+        .main-gr {
+            background-image:
+                linear-gradient(90deg,
+                    #00734a 50%,
+                    #c9252c 0);
+            height:
+                5px;
+        }
+
+        .text-foot {
+            width:
+                50%;
+            display:
+                flex;
+            justify-content:
+                center;
+            text-align:
+                center;
+            margin-left:
+                25%;
+        }
+
+        .text-foot img {
+            margin-top:
+                50px;
+            margin-bottom:
+                10px;
+        }
+
+        .text-foot h4 {
+            margin-top:
+                30px;
+        }
+
+        .body-main {
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .body-text {
+            max-width: 30vw;
+            align-self: flex-start;
+            padding-top: 100px;
+        }
+
+        .body-video video {
+            width: 40vw;
+            height: 30%;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Green Banner -->
+    <div class="green-banner">
+        <marquee>Get additional 10% off on your first purchase through app or web. Use Code PEFIRST10. Download the
+            Peter England App for other exciting offers!</marquee>
+    </div>
+
+    <!-- Black Navbar (Fixed) -->
+    <nav class="navbar navbar-expand-lg navbar-custom bllack">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <div class="navbar-brand dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="moreBrandsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Brands
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="moreBrandsDropdown">
+                        <a class="dropdown-item" href="#">Brand 1</a>
+                        <a class="dropdown-item" href="#">Brand 2</a>
+                        <a class="dropdown-item" href="#">Brand 3</a>
+                    </div>
+                </div>
+                <a class="nav-link" href="#">| Add delivery location</a>
+            </div>
+            <div class="ml-auto d-flex align-items-center">
+                <a class="nav-link" href="#"><img src="location.png" height="20px" alt="location-icon">Stores |</a>
+                <a class="nav-link" href="#"><img src="chat.png" height="20px" alt="chat-icon">Contact Us |</a>
+                <a class="nav-link" href="#"><img src="user.png" height="20px" alt="login-icon">Log In |</a>
+                <a class="nav-link" href="#"><img src="heart.png" height="20px" alt="location-icon">|</a>
+                <div class="cart-icon" data-toggle="modal" data-target="#cartModal">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="cart" width="30"
+                        height="30">
+                    <span class="badge badge-pill badge-danger" id="cart-count">0</span>
+                </div>
+                <img src="https://imagescdn.peterengland.com/img/app/brands/superapp/Icons/sprite_logo_header_2.png"
+                    height="40px" width="40px" alt="" class="navbar-brand">
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar two -->
+    <div class="main-menu">
+        <div class="container-fluid d-flex justify-content-right align-items-center">
+            <img src="https://imagescdn.peterengland.com/img/app/brands/superapp/Icons/header_brand_logo_PE.png?auto=format"
+                height="70px" alt="Peter England Logo">
+            <div>
+                <a class="nav-link d-inline" href="men.html">MEN</a>
+                <a class="nav-link d-inline" href="cricket.html">CRICKET</a>
+                <a class="nav-link d-inline" href="weddingStore.html">WEDDING STORE</a>
+                <a class="nav-link d-inline" href="newArrivals.html">NEW ARRIVALS</a>
+                <a class="nav-link d-inline" href="kids.html">KIDS</a>
+                <a class="nav-link d-inline" href="customise.html">CUSTOMISE</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="background-image">
+        <div class="overlay-content">
+            <p>With Customisable Shirts</p>
+            <h2>MAKE IT YOURS</h2>
+            <p>Modern colours | 3 distinct collar styles | 2 impeccable fits | 1 suave look</p>
+        </div>
+    </div>
+
+    <div class="main-gr">
+    </div>
+
+    <div class="text-foot">
+        <img src="https://s7ap1.scene7.com/is/image/adityabirlafashion/pe_platinum_2x?resMode=sharp2&wid=30&hei=30"
+            alt="">
+    </div>
+
+    <div class="text-foot">
+        <h4>GET THE DETAILS YOU LOVE</h4>
+    </div>
+
+    <div class="text-foot">
+        <p>Curate your personal style by hand-picking your favourite features.</p>
+    </div>
+
+    <div class="body-main">
+        <div class="body-text">
+            Choose between regular fit or slim fit. Pick from essential whites, classic blues or modern hues of pink
+            dobby, aqua and more. And top the look with a crisp cutaway collar or sophisticated button-downs. Make your
+            shirt truly yours.
+        </div>
+        <div class="body-vid">
+            <video autoplay muted controls name="media" src="Customisation 20Sec_25June.mp4" width="700px" ></video>
+        </div>
+    </div>
+
+    <div class="text-foot">
+        <img src="https://s7ap1.scene7.com/is/image/adityabirlafashion/pe_platinum_2x?resMode=sharp2&wid=30&hei=30"
+            alt="">
+    </div>
+
+
+
+    <div class="text-foot">
+        <h4>EASY PICKINGS</h4>
+    </div>
+
+    <div class="text-foot">
+        <p>Build your custom shirt in 4 steps.</p>
+    </div>
+
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">1. Pick A Color</div>
+            <div class="col">2. Select The Collar Style</div>
+            <div class="col">3. Choose Your Fit </div>
+            <div class="col">4. Get Your Order Home Delivered</div>
+        </div>
+        <div class="row">
+            <div class="col"><img
+                    src="https://s7ap1.scene7.com/is/image/adityabirlafashion/PE_M_Customization_01?resMode=sharp2&wid=310&hei=413"
+                    height="100%" width="80%" alt=""></div>
+            <div class="col"><img
+                    src="https://s7ap1.scene7.com/is/image/adityabirlafashion/PE_M_Customization_02?resMode=sharp2&wid=310&hei=413"
+                    height="100%" width="80%" alt=""></div>
+            <div class="col"><img
+                    src="https://s7ap1.scene7.com/is/image/adityabirlafashion/PE_M_Customization_03?resMode=sharp2&wid=310&hei=413"
+                    height="100%" width="80%" alt=""></div>
+            <div class="col"><img
+                    src="https://s7ap1.scene7.com/is/image/adityabirlafashion/PE_M_Customization_04?resMode=sharp2&wid=310&hei=413"
+                    height="100%" width="80%" alt=""></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-c text-light">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">About Us</h5>
+                <p>
+                    Peter England is one of the leading menswear brands in India. We offer a wide range of clothing
+                    and accessories for men.
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Quick Links</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-light">Home</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">About</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-light">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <p>
+                    Email: info@peterengland.com<br>
+                    Phone: +91 1234567890
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-white">
+            &copy; 2024 Peter England. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+</body>
+
+</html>

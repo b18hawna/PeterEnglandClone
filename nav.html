@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Store Section</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .green-banner {
+            background-color: rgb(0, 115, 74);
+            color: white;
+            padding: 2.5px 0;
+            text-align: center;
+        }
+
+        .bllack {
+            background-color: rgba(0, 0, 0, 0.87);
+            padding: 0 rem;
+        }
+
+        .bllack a {
+            color: white;
+            font-size: medium;
+        }
+
+        .bllack img {
+            background-color: white;
+            margin: 10px;
+            padding: 2px;
+        }
+
+        .main-menu div a {
+            color: black;
+            font-size: small;
+        }
+
+        .main-menu {
+            padding-top: 0;
+            margin-top: 0;
+            margin-left: 35px;
+
+        }
+
+        .navbar {
+            padding: 0;
+            font-size: small;
+        }
+
+        .headImg {
+            color: white;
+        }
+
+        .cart-icon {
+            cursor: pointer;
+        }
+
+        .badge {
+            font-size: 1rem;
+        }
+
+        /* Custom CSS to position the modal in the corner */
+        .corner-modal .modal-dialog {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            margin: 0;
+            max-width: 350px;
+            /* Adjust width as needed */
+        }
+
+        .corner-modal .modal-content {
+            background-color: rgb(40, 42, 42);
+            color: white;
+            font-size: medium;
+        }
+
+        .corner-modal .modal-content img {
+            background-color: lightgray;
+            padding: 2px;
+            ;
+        }
+
+        .modal-content .modal-header button {
+            color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Location Access Pop-Up Modal -->
+    <div class="modal fade corner-modal" id="locationModal" tabindex="-1" role="dialog"
+        aria-labelledby="locationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="locationModalLabel">peterengland.abfrl.in wants to</h6>
+                    <button type="button" btn-light class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><img src="location.png" width="20px" alt=""> Know your location</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Allow</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Block</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Green Banner -->
+    <div class="green-banner">
+        <marquee>Get additional 10% off on your first purchase through app or web. Use Code PEFIRST10. Download the
+            Peter England App for other exciting offers!</marquee>
+    </div>
+
+    <!-- Black Navbar (Fixed) -->
+    <nav class="navbar navbar-expand-lg navbar-custom bllack">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <div class="navbar-brand dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="moreBrandsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Brands
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="moreBrandsDropdown">
+                        <a class="dropdown-item" href="#">Brand 1</a>
+                        <a class="dropdown-item" href="#">Brand 2</a>
+                        <a class="dropdown-item" href="#">Brand 3</a>
+                    </div>
+                </div>
+                <a class="nav-link" href="#">| Add delivery location</a>
+            </div>
+            <div class="ml-auto d-flex align-items-center">
+                <a class="nav-link" href="#"><img class="headImg" src="location.png" height="20px"
+                        alt="location-icon">Stores |</a>
+                <a class="nav-link" href="#"><img src="chat.png" height="20px" alt="chat-icon">Contact Us |</a>
+                <a class="nav-link" href="#"><img src="user.png" height="20px" alt="login-icon">Log In</a>
+                <a class="navbar-brand">Shop</a>
+                <div class="cart-icon" data-toggle="modal" data-target="#cartModal">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="cart" width="30"
+                        height="30">
+                    <span class="badge badge-pill badge-danger" id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar two -->
+    <div class="main-menu">
+        <div class="container-fluid d-flex justify-content-right align-items-center">
+            <img src="https://imagescdn.peterengland.com/img/app/brands/superapp/Icons/header_brand_logo_PE.png?auto=format"
+                height="70px" alt="Peter England Logo">
+            <div>
+                <a class="nav-link d-inline" href="men.html">MEN</a>
+                <a class="nav-link d-inline" href="cricket.html">CRICKET</a>
+                <a class="nav-link d-inline" href="weddingStore.html">WEDDING STORE</a>
+                <a class="nav-link d-inline" href="#">NEW ARRIVALS</a>
+                <a class="nav-link d-inline" href="#">KIDS</a>
+                <a class="nav-link d-inline" href="#">CUSTOMISE</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show the modal on page load
+        $(document).ready(function () {
+            $('#locationModal').modal('show');
+        });
+    </script>
+
+
+</body>
+
+</html>
